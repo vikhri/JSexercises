@@ -1,13 +1,19 @@
 let numbers = (begin, end) => {
   for (let i = begin; i <= end; i++) {
-    if (i % 3 === 0 && i % 5 === 0) {
-      console.log("делится на 3 и 5");
-    } else if (i % 5 === 0) {
-      console.log("делится на 5");
-    } else if (i % 3 === 0) {
-      console.log("делится на 3");
-    } else {
-      console.log(i);
+    
+    switch (true) {
+      case (i % 5 === 0 && i % 3 === 0):
+          console.log("FizzBuzz");
+          break;
+      case i % 3 === 0:
+          console.log("Fizz");
+          break;
+      case i % 5 === 0:
+          console.log("Buzz");
+          break;
+      default:
+          console.log(i);
+          break;
     }
   }
 };
